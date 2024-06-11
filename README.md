@@ -6,11 +6,14 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+State Management: GetX
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+To run the app using Flavor you can use the command
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+flutter run lib/main_development.dart
+flutter run lib/main_staging.dart
+flutter run lib/main_production.dart
+
+Or if you use VsCode you just simply click the Icon Play Button (Ctrl+Shift+D) in the left corner top and you have a choice of what environment you want to run.
+
+After successfully running the project you see the Splash Screen and then the main page which has a button gets a random string and button reset.
