@@ -40,6 +40,27 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
+    flavorDimensions "default"
+    productFlavors { 
+        production {
+            dimension "default"
+            resValue "string", "app_name", "Flutter Exam"
+            applicationIdSuffix ""
+        }
+        staging {
+            dimension "default"
+            resValue "string", "app_name", "STG Flutter Exam"
+            applicationIdSuffix ".stg"
+           
+        }        
+        development {
+            dimension "default"
+            resValue "string", "app_name", "DEV Flutter Exam"
+            applicationIdSuffix ".dev"
+        }
+    }
+
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "example.flutter_exam"

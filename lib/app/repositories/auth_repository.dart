@@ -1,7 +1,6 @@
-import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter_exam/constants/api_base_url.dart';
-import 'package:flutter_exam/utils/auth_interceptor.dart';
+import 'package:flutter_exam/utils/dio_interceptor.dart';
 import 'package:flutter_exam/utils/my_logger.dart';
 
 class AuthRepository {
@@ -18,7 +17,7 @@ class AuthRepository {
     );
 
     _dio = Dio(options);
-    _dio.interceptors.add(AuthInterceptor());
+    _dio.interceptors.add(DioInterceptor());
   }
 
   Future<String> getRandomString() async {
