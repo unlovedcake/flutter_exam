@@ -25,6 +25,7 @@ jobs:
           architecture: x64
       - run: flutter test test/api_repository_test.dart
       - run: flutter build apk -t lib/main_development.dart  --flavor=development --split-per-abi --no-shrink
+      #- run: flutter build apk --release --split-per-abi
 
       # - run: |
       #     flutter build ios --no-codesign
@@ -37,6 +38,7 @@ jobs:
       - name: Push to Releases
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/app/outputs/apk/release/*,build/ios/iphoneos/app.ipa"
+          #artifacts: "build/app/outputs/apk/release/*,build/ios/iphoneos/app.ipa"
+          artifacts: "build/app/outputs/apk/release/*.apk"
           tag: v1.0.${{ github.run_number }}
           token: ${{ secrets.TOKEN }}
