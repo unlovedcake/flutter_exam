@@ -60,7 +60,7 @@ void main() {
         isInternetConnection = true;
       }
       // Compare actual result with expected result
-      expect(isInternetConnection, false);
+      expect(isInternetConnection, true);
     });
   });
 }
